@@ -16,16 +16,16 @@ urls:
       url: /blog
     - text: Gallery
       url: /gallery
-    - text: Shop
-      url : /shop
+#    - text: Shop
+#      url : /shop
     - text: Contact
       url : /contact
 
 
 # Edit Author details (For multi authors check _data/authors.yml)
 
-author_logo: profile.png
-author: John Doe
+author_logo: Circuit_Rocket.png
+author: Mark Paral
 author_bio: Hi, my name is John Doe. I built this site using devlopr-jekyll :D
 author_email: "mail@sujaykundu.com"
 author_location: India
@@ -71,16 +71,16 @@ author_project_details:
                 visibility: true
 
 # social links
-twitter_username: johndoe
-github_username:  sujaykundu777
-facebook_username: johndoe
-linkedin_username: johndoe
-behance_username: johndoe
-instagram_username: johndoe
-medium_username: johndoe
-telegram_username: johndoe
-dribbble_username: johndoe
-flickr_username: johndoe
+#twitter_username: johndoe
+github_username:  markparal
+#facebook_username: johndoe
+linkedin_username: www.linkedin.com/in/mark-paral
+#behance_username: johndoe
+#instagram_username: johndoe
+#medium_username: johndoe
+#telegram_username: johndoe
+#dribbble_username: johndoe
+#flickr_username: johndoe
 
 #for comments ( we got Disqus and Hyvor Commenting, uncomment the one you want to use )
 
