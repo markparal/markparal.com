@@ -1,5 +1,5 @@
 title: Mark Paral
-subtitle: Engineer
+subtitle: Aero Astro Engineer
 description: >- # this means to ignore newlines until "baseurl:"
 
 url: "https://markparal.com" # the base hostname & protocol for your site, e.g. https://example.github.io
@@ -24,36 +24,50 @@ urls:
 # Edit Author details (For multi authors check _data/authors.yml)
 
 author_logo: Circuit_Rocket.png
+author_pic: Headshot.jpg
 author: Mark Paral
-author_bio: Hi, my name is John Doe. I built this site using devlopr-jekyll :D
-author_email: "mail@sujaykundu.com"
+author_bio: Hello! My name is Mark Paral and I am a Master's student studying Aeronautical and Astronautical Engineering at Stanford University!
+author_email: "markwparal@gmail.com"
 author_location: USA
 author_website_url: "https://markparal.com"
-typewrite-text: This website is under construction and will be updated soon!
-hero_cover_img: Liftoff.jpg # replace this for changing homepage cover (eg. try cover.jpeg). Image should be in /assets/img
+welcome_message: This website is under construction and will be updated soon!
+hero_cover_img: cygnus.png # replace this for changing homepage cover (eg. try cover.jpeg). Image should be in /assets/img
+author_skills: Not HTML!
 
 # Experiences
 author_work_experiences:
-            - company_name: Google
-              company_logo: google.png
-              company_url: https://google.com
-              designation: Software Engineer
-              description: Worked on various Google Products
+            - company_name: Lynk Global - (May 2023 - Aug 2023)
+              company_logo: Lynk.png
+              company_url: https://lynk.world/
+              designation: Engineering Intern
+              description: "Assembled hardware-in-the-loop (HWIL) setup for novel direct-to-phone satellites<br><br>Developed and adapted software for handling CAN network interfaces between sensors, actuators, and dynamics simulator in C<br><br>Built sensor simulators using microcontrollers<br><br>Automated reaction wheel qualification testing"
               visibility: true
-            - company_name: Microsoft
-              company_logo: microsoft.png
-              company_url: https://microsoft.com
-              designation: Azure Developer
-              description: Worked on various Azure Cloud Products
+            - company_name: Blue Origin - (May 2022 - Aug 2022)
+              company_logo: blueorigin.jpg
+              company_url: https://www.blueorigin.com/
+              designation: Avionics Hardware Intern
+              description: "Developed novel solution to enhance and expand sensor infrastructure on the New Shepard Propulsion Module<br><br>Designed custom PCBs for signal conditioning and power distribution on the New Shepard launch vehicle<br><br>Performed audit of New Shepard crew capsule sensors<br><br>Wrote engineering work orders to resolve non-conformance reports"
+              visibility: true
+            - company_name: Firefly Aerospace - (Jan 2022 - May 2022)
+              company_logo: firefly.png
+              company_url: https://fireflyspace.com/
+              designation: Avionics Intern
+              description: "Developed custom hardware and software solution to automate qualification process for harnessing on all vehicles<br><br>Constructed payload wiring diagrams for the Alpha launch vehicle in Siemens Capital software<br><br>Created and led a test campaign to qualify securing devices used on multiple spacecraft<br><br>Built custom Python executables to allow for quick updates to components in Siemens Capital software"
               visibility: true
 
 # Education
 author_education_details:
-              - college_logo: mit.png
-                college_name: MIT
-                college_url: https://mit.org
-                college_degree: CS Engineer
-                description: Bachelor of Technology
+              - college_logo: stanford.jpg
+                college_name: Stanford
+                college_url: https://www.stanford.edu/
+                college_degree: Aero Astro Engineering
+                description: Master of Science
+                visibility: true
+              - college_logo: purdue.jpg
+                college_name: Purdue
+                college_url: https://www.purdue.edu/
+                college_degree: Aero Astro Engineering
+                description: Bachelor of Science
                 visibility: true
 
 # Projects
@@ -84,21 +98,21 @@ linkedin_username: www.linkedin.com/in/mark-paral
 #for comments ( we got Disqus and Hyvor Commenting, uncomment the one you want to use )
 
 # disqus_shortname: sujay-kundu
-hyvor_talk_website_id: 476
+#hyvor_talk_website_id: 476
 
 # wakatime username (coding activity)
-wakatime_username: sujaykundu777
+#wakatime_username: sujaykundu777
 
 # mailchimp embedded form url (newsletter):
-mailchimp_form_url: https://sujaykundu.us10.list-manage.com/subscribe/post?u=50bab1c85eae24ecfb0f68361&amp;id=3a2dd721d0
+#mailchimp_form_url: https://sujaykundu.us10.list-manage.com/subscribe/post?u=50bab1c85eae24ecfb0f68361&amp;id=3a2dd721d0
 
 # contact form - (choose formspress or getform)
 # getform_endpoint: 83b703c3-9e47-4df4-ac55-e24d7eb02abc
-formspree_email: johndoe@gmail.com
+#formspree_email: johndoe@gmail.com
 
 # releases - widget can be (sidebar, modal or embed)
-olvy_organization: devlopr
-olvy_widget_type: sidebar
+#olvy_organization: devlopr
+#olvy_widget_type: sidebar
 
 # syntax highlighter
 markdown: kramdown
@@ -108,7 +122,7 @@ permalink: pretty
 # Choose what to show ( can be true or false)
 show_author_work_experiences: true
 show_author_education_details: true
-show_author_project_details: true
+show_author_project_details: false
 
 # pagination of posts
 paginate: 4
