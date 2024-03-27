@@ -23,7 +23,7 @@ urls:
 
 # Edit Author details (For multi authors check _data/authors.yml)
 
-author_logo: Circuit_Rocket.png
+author_logo: CircuitRocket.png
 author_pic: Headshot.jpg
 author: Mark Paral
 author_bio: Hello! My name is Mark Paral and I am a Master's student studying Aeronautical and Astronautical Engineering at Stanford University!
