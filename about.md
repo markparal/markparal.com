@@ -15,7 +15,7 @@ permalink: /about/
   <div class="profile-main">
     <h1 class="profile-title">I'm Mark!</h1>
     <p class="profile-bio">
-      I am an aeronautical and astronautical engineer working on controls systems for satellites. Previously, I obtained my bachelor's from Purdue and my master's from Stanford. If you want to connect, please reach out!
+      I am an aeronautical and astronautical engineer working on GNC and systems design for satellites. Previously, I obtained my bachelor's from Purdue and my master's from Stanford. If you want to connect, please reach out!
     </p>
     <div class="profile-buttons">
       <a href="mailto:markwparal@gmail.com" class="profile-btn email-btn" title="Email"><span>✉️</span></a>
