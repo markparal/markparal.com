@@ -7,7 +7,7 @@ image: /assets/images/MAV/cross section pic.png
 ---
 # Meet the MAV
 ---
-During the fall of 2020, I took the class AAE 251: Introduction to Aerospace Design. In this course, my team and I were tasked with coming up with a new concept for the Mars Ascent Vehicle (MAV), specifically focusing on the propulsive aspects of the craft. The MAV is to be used in the upcoming Mars Sample Return Mission launching in 2026.
+During the fall of 2020, I took the class AAE 251: Introduction to Aerospace Design. In this course, my team and I were tasked with coming up with a new concept for the Mars Ascent Vehicle (MAV), specifically focusing on the propulsive aspects of the craft. At the time, the MAV was planned as part of the NASA/ESA Mars Sample Return campaign, which has since been restructured.
 
 More information on the mission can be found [here](https://spaceflightnow.com/2020/04/20/nasa-narrows-design-for-rocket-to-launch-samples-off-of-mars/)
 

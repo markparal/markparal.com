@@ -129,7 +129,7 @@
 }
 
 body { 
-  font-family: 'Helvetica Neue', Helvetica, Arial, serif; 
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; 
   font-size: 1em; 
   line-height: 1.5; 
   color: var(--text-primary); 
@@ -159,6 +159,8 @@ body {
 
 .navbar-links li {
   margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .navbar-links a {
@@ -415,6 +417,13 @@ body {
   }
 }
 
+/* Embedded videos: shrink to fit narrow screens, keep 16:9 */
+#main_content iframe {
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+}
+
 /* Mobile responsive styles */
 @media (max-width: 768px) {
   .navbar {
@@ -448,6 +457,10 @@ body {
     right: 0;
   }
   
+  .navbar-links li {
+    width: 100%;
+  }
+
   .navbar-links a {
     font-size: 1.1em;
     padding: 10px 15px;

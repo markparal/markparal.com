@@ -22,28 +22,43 @@
   const navbarLinks = document.getElementById('navbar-links');
   const mobileOverlay = document.getElementById('mobile-overlay');
 
-  // Initialize theme
-  function initTheme() {
-    const savedTheme = localStorage.getItem('theme');
-    
-    if (savedTheme && THEMES[savedTheme]) {
-      setTheme(savedTheme);
-    } else {
-      // Always default to dark mode
-      setTheme('dark');
+  // localStorage can throw (e.g. blocked storage), so never let it break the page
+  function getSavedTheme() {
+    try {
+      return localStorage.getItem('theme');
+    } catch (e) {
+      return null;
     }
   }
 
-  // Set theme
-  function setTheme(theme) {
+  function saveTheme(theme) {
+    try {
+      localStorage.setItem('theme', theme);
+    } catch (e) {}
+  }
+
+  // Initialize theme: dark by default, light only if the user chose it
+  function initTheme() {
+    const savedTheme = getSavedTheme();
+    applyTheme(THEMES[savedTheme] ? savedTheme : 'dark');
+  }
+
+  // Apply theme to the page without saving it
+  function applyTheme(theme) {
     if (!THEMES[theme]) return;
     
     html.setAttribute('data-theme', theme);
-    localStorage.setItem('theme', theme);
     updateThemeIcon(theme);
     
     // Dispatch custom event for other scripts
     window.dispatchEvent(new CustomEvent('themeChanged', { detail: { theme } }));
+  }
+
+  // Set theme and remember the user's choice
+  function setTheme(theme) {
+    if (!THEMES[theme]) return;
+    applyTheme(theme);
+    saveTheme(theme);
   }
 
   // Update theme icon
@@ -62,13 +77,15 @@
 
   // Mobile menu functionality
   function toggleMobileMenu() {
-    hamburger.classList.toggle('active');
+    const isOpen = hamburger.classList.toggle('active');
+    hamburger.setAttribute('aria-expanded', isOpen);
     navbarLinks.classList.toggle('active');
     mobileOverlay.classList.toggle('active');
   }
 
   function closeMobileMenu() {
     hamburger.classList.remove('active');
+    hamburger.setAttribute('aria-expanded', 'false');
     navbarLinks.classList.remove('active');
     mobileOverlay.classList.remove('active');
   }
@@ -100,16 +117,6 @@
     window.addEventListener('resize', () => {
       if (window.innerWidth > 768) {
         closeMobileMenu();
-      }
-    });
-
-    // Listen for system theme changes
-    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-    mediaQuery.addEventListener('change', (e) => {
-      // Only auto-switch if user hasn't manually set a preference
-      if (!localStorage.getItem('theme')) {
-        const newTheme = e.matches ? 'dark' : 'dark';
-        setTheme(newTheme);
       }
     });
   }

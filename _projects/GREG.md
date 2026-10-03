@@ -13,7 +13,7 @@ image: /assets/images/greg/greg.png
     </figure>
 </div>
 
-The Ground Effect Glider (GREG) was a ground effect model aircraft I and three other aerospace engineers from Stanford build and tested in 36 hours. This was part of the [TreeHacks Hackathon](https://www.treehacks.com/#home) hosted by Stanford each year. Our goal was to demonstrate efficiency improvements taking advantage of improved aerodynamic characteristics resulting from interactions with the ground.
+The Ground Effect Glider (GREG) was a ground effect model aircraft that three other aerospace engineers from Stanford and I built and tested in 36 hours. This was part of the [TreeHacks Hackathon](https://www.treehacks.com/#home) hosted by Stanford each year. Our goal was to demonstrate efficiency improvements taking advantage of improved aerodynamic characteristics resulting from interactions with the ground.
 
 # Ground Effect Principles
 ---
@@ -34,7 +34,7 @@ Another noteworthy effect is the reduction in the upwash and downwash, and there
 <div style="text-align: center;">
     <figure>
         <img src="{{ 'assets/images/greg/ground_effect_naval_1.png' | relative_url }}" alt="naval1" style="width:80%; border-radius:10px;">
-        <figcaption style="font-style: italic; margin-top: 10px;">Ground Effect Quantified from "Aerodynamics for Naval Aviators" Figure 6.9</figcaption>
+        <figcaption style="font-style: italic; margin-top: 10px;">Ground Effect on Induced Drag from "Aerodynamics for Naval Aviators" Figure 6.9</figcaption>
     </figure>
 </div>
 <br>
@@ -44,7 +44,7 @@ The figure above shows the benefits of the ground effect as a function of the he
 <div style="text-align: center;">
     <figure>
         <img src="{{ 'assets/images/greg/ground_effect_naval_2.png' | relative_url }}" alt="naval2" style="width:80%; border-radius:10px;">
-        <figcaption style="font-style: italic; margin-top: 10px;">Ground Effect Quantified from "Aerodynamics for Naval Aviators" Figure 6.9</figcaption>
+        <figcaption style="font-style: italic; margin-top: 10px;">Ground Effect on Lift and Thrust Required from "Aerodynamics for Naval Aviators" Figure 6.9</figcaption>
     </figure>
 </div>
 <br>
@@ -58,7 +58,7 @@ Useful Resources:
 
 # Ground Effect Vehicles
 ---
-Ground effect vehicles (GEVs) are vehicles that are designed to operate in the ground effect regime, typically heights of less than half the wingspan off the ground. The father of such vehicles is generally considered to be the Soviet engineer Rostislav Alexeyev and the German engineer Alexander Lippisch.
+Ground effect vehicles (GEVs) are vehicles that are designed to operate in the ground effect regime, typically heights of less than half the wingspan off the ground. The fathers of such vehicles are generally considered to be the Soviet engineer Rostislav Alexeyev and the German engineer Alexander Lippisch.
 
 <div style="text-align: center;">
     <figure>
@@ -69,11 +69,9 @@ Ground effect vehicles (GEVs) are vehicles that are designed to operate in the g
 <br>
 
 There are a few different wing configurations typically seen on GEVs: 
-<ul>
-    <strong>(A)</strong> The straight wing configuration.<br>
-    <strong>(B)</strong> The reverse-delta wing configuration.<br>
-    <strong>(C)</strong> The tandem wings configuration.
-</ul>
+- **(A)** The straight wing configuration.
+- **(B)** The reverse-delta wing configuration.
+- **(C)** The tandem wings configuration.
 
 The most popular today appears to be the reverse-delta configuration due to its excellent stability properties and apparent superior performance.
 
@@ -87,7 +85,7 @@ GEVs have a wide range of applications including cargo transit, military, and se
 </div>
 <br>
 
-Compared to traditional airlines, it was suggested in a 1994 Advanced Projects report that GEVs were less efficient during cruise. It is unclear if this sentiment remains today. A popular concept being investigated now is electric GEVs, such as the one proposed by REGENT. Additionally, DARPA has launched the “Liberty-Lifter” program which aims to develop GEV based cargo transport vehicles.
+Compared to traditional aircraft, it was suggested in a 1994 Advanced Projects report that GEVs were less efficient during cruise. It is unclear if this sentiment remains today. A popular concept being investigated now is electric GEVs, such as the one proposed by REGENT. Additionally, DARPA has launched the “Liberty-Lifter” program which aims to develop GEV based cargo transport vehicles.
 
 There are quite a few benefits when considering GEVs: 
 - Lower operational costs when compared to traditional aircraft

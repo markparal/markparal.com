@@ -6,5 +6,4 @@ publisher: "45th International Pyrotechnics Society Seminar"
 date: 2022-07-01
 image: "/assets/images/piezo-energetic_son/piezo-energetic_cover.png"
 type: "Academic Papers"
-link: 
 --- 

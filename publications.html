@@ -19,23 +19,22 @@ permalink: /publications/
 {% assign pub_year = publication.date | date: "%Y" %}
 
 {% if pub_year != current_year %}
-{% if current_year != "" %}
-{% endif %}
 <h3 class="year-header">{{ pub_year }}</h3>
 {% assign current_year = pub_year %}
 {% endif %}
 
 <div class="publication-grid">
-  <img src="{{ publication.image | default: '/assets/images/default-publication.png' | relative_url }}"
+  <img src="{{ publication.image | default: '/assets/images/Circuit Rocket even.png' | relative_url }}"
     alt="{{ publication.title }}" class="publication-image"
-    onerror="this.src='{{ '/assets/images/default-publication.png' | relative_url }}'">
+    onerror="this.onerror=null; this.src='{{ '/assets/images/Circuit Rocket even.png' | relative_url }}'">
   <div class="publication-content">
     <h3 class="publication-title">
-      {% if publication.link contains 'http' %}
+      {% if publication.link == nil or publication.link == "" %}
+      {{ publication.title }}
+      {% elsif publication.link contains 'http' %}
       <a href="{{ publication.link }}" target="_blank" rel="noopener noreferrer">{{ publication.title }}</a>
       {% else %}
-      <a href="{{ publication.link | relative_url }}" target="_blank" rel="noopener noreferrer">{{ publication.title
-        }}</a>
+      <a href="{{ publication.link | relative_url }}" target="_blank" rel="noopener noreferrer">{{ publication.title }}</a>
       {% endif %}
     </h3>
     <p class="publication-authors"><strong>{{ publication.authors }}</strong></p>

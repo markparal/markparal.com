@@ -29,11 +29,3 @@ One can test the website locally using the command
 
 ## Markdown
 Use [this](https://www.markdownguide.org/basic-syntax/) helpful guide for Markdown syntax.
-
-## TODOs
-- Add Fantasy Football Project
-- Add Autonomous Drone Nav Project
-- Beautify splash page
-- Add Google Analytics?
-- Something about MIFP?
-- Update Resume

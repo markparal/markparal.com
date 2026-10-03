@@ -14,14 +14,12 @@ permalink: /projects/
     {% assign project_year = project.date | date: "%Y" %}
     
     {% if project_year != current_year %}
-      {% if current_year != "" %}
-      {% endif %}
       <h2 class="year-header">{{ project_year }}</h2>
       {% assign current_year = project_year %}
     {% endif %}
     
     <div class="project-grid">
-      <img src="{{ project.image | default: '/assets/images/default-project.png' | relative_url }}" alt="{{ project.title }}" class="project-image" onerror="this.src='{{ '/assets/images/default-project.png' | relative_url }}'">
+      <img src="{{ project.image | default: '/assets/images/Circuit Rocket even.png' | relative_url }}" alt="{{ project.title }}" class="project-image" onerror="this.onerror=null; this.src='{{ '/assets/images/Circuit Rocket even.png' | relative_url }}'">
       <div class="project-content">
         <h3 class="project-title">
           <a href="{{ project.url }}">{{ project.title }}</a>

@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
-    <!-- Immediate theme detection to prevent flash -->
+
+    <!-- Apply the saved theme (default dark) before first paint to prevent a flash -->
     <script>
       (function() {
-        const savedTheme = localStorage.getItem('theme');
-        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        const theme = savedTheme || (prefersDark ? 'dark' : 'dark'); // Default to dark
+        let theme = 'dark';
+        try {
+          if (localStorage.getItem('theme') === 'light') theme = 'light';
+        } catch (e) {}
         document.documentElement.setAttribute('data-theme', theme);
       })();
     </script>
@@ -18,9 +18,6 @@
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     <link rel="stylesheet" type="text/css" href="{{ '/assets/css/print.css' | relative_url }}" media="print">
     <link rel="icon" href="{{ '/assets/favicon.ico' | relative_url }}" type="image/x-icon">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
 
     {% seo %}
     {% include head-custom.html %}
@@ -29,7 +26,7 @@
   <body>
     <!-- Theme Toggle Button -->
     <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
-      <span id="theme-icon">🌙</span>
+      <span id="theme-icon">☀️</span>
     </button>
 
     <div id="container">
@@ -43,17 +40,17 @@
             </div>
           
             <nav class="navbar">
-              <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+              <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
               </button>
               <ul class="navbar-links" id="navbar-links">
-                <a href="{{ '/' | relative_url }}">Home</a>
-                <a href="{{ '/projects/' | relative_url }}">Projects</a>
-                <a href="{{ '/publications/' | relative_url }}">Publications</a>
-                <a href="{{ '/assets/resume/Paral,MarkResume.pdf' | relative_url }}">Resume</a>
-                <a href="{{ '/about/' | relative_url }}">About</a>
+                <li><a href="{{ '/' | relative_url }}">Home</a></li>
+                <li><a href="{{ '/projects/' | relative_url }}">Projects</a></li>
+                <li><a href="{{ '/publications/' | relative_url }}">Publications</a></li>
+                <li><a href="{{ '/assets/resume/Paral,MarkResume.pdf' | relative_url }}">Resume</a></li>
+                <li><a href="{{ '/about/' | relative_url }}">About</a></li>
               </ul>
             </nav>
             <div class="mobile-overlay" id="mobile-overlay"></div>
