@@ -1,0 +1,56 @@
+---
+layout: default
+title: mako-sgp4 Demo
+description: SGP4 propagation in your browser, powered by mako-sgp4 compiled to WebAssembly
+permalink: /projects/mako-sgp4/demo/
+wide: true
+---
+
+<div id="mako-demo" class="demo"
+     data-wasm="{{ '/assets/mako-sgp4/mako_sgp4_wasm.js' | relative_url }}"
+     data-earth="{{ '/assets/images/mako/earth-mask.png' | relative_url }}">
+
+  <div class="demo-top">
+    <div class="demo-panel demo-space">
+      <div class="demo-panel-title">Orbit <span class="demo-muted">TEME, ±1 orbit around now</span></div>
+      <div id="demo-globe" class="demo-globe"></div>
+    </div>
+
+    <div class="demo-panel demo-input">
+      <div class="demo-toggle">
+        <button type="button" data-format="tle" class="active">TLE</button>
+        <button type="button" data-format="omm">OMM</button>
+      </div>
+      <textarea id="demo-elements" spellcheck="false" autocomplete="off" aria-label="Element sets"></textarea>
+      <div class="demo-actions">
+        <button type="button" id="demo-run" class="demo-run">Propagate</button>
+        <span class="demo-muted">Up to 8 element sets. Leave empty to use the example.</span>
+      </div>
+      <div id="demo-message" class="demo-message" hidden></div>
+    </div>
+  </div>
+
+  <div class="demo-panel">
+    <div class="demo-panel-title">Ground track <span id="demo-clock" class="demo-muted"></span></div>
+    <canvas id="demo-map" class="demo-map"></canvas>
+  </div>
+
+  <div class="demo-panel">
+    <table class="demo-table">
+      <thead>
+        <tr><th></th><th>Name</th><th>NORAD</th><th>Epoch</th><th>Period</th><th>Incl.</th><th>Lat</th><th>Lon</th><th>Alt</th></tr>
+      </thead>
+      <tbody id="demo-sats"></tbody>
+    </table>
+  </div>
+</div>
+
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
+  }
+}
+</script>
+<script type="module" src="{{ '/assets/js/mako-demo.js' | relative_url }}"></script>

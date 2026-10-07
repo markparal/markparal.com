@@ -4,6 +4,7 @@ title: "GREG"
 date: 2024-02-20
 description: Building a ground effect vehicle in 36 hours
 image: /assets/images/greg/greg.png
+featured: 3
 ---
 # Meet GREG
 ---

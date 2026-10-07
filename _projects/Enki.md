@@ -4,6 +4,7 @@ title: "Enki"
 date: 2022-04-01
 description: My first completely custom high powered rocket
 image: /assets/images/enki/liftoff.JPG
+featured: 4
 ---
 # Meet Enki
 ---

@@ -2,6 +2,7 @@
 layout: default
 title: About
 permalink: /about/
+hide_title: true
 ---
 
 <div class="profile-container">

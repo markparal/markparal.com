@@ -501,3 +501,276 @@ body {
 [data-theme="dark"] .navbar {
   background: var(--bg-primary);
 }
+/* Site name in the header links home */
+.brand-link,
+.brand-link:hover {
+  text-decoration: none;
+  background: none;
+}
+
+/* Page title at the top of the content */
+.page-heading {
+  margin: 10px 0 30px;
+}
+
+.page-title {
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 1.2;
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+.page-subtitle {
+  margin: 8px 0 0;
+  font-size: 1.15em;
+  color: var(--text-primary);
+}
+
+/* Home page */
+.home-intro {
+  margin: 10px 0 24px;
+}
+
+.home-intro p {
+  font-size: 1.1em;
+  margin: 12px 0 0;
+}
+
+.home-hero {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .page-title {
+    font-size: 30px;
+  }
+}
+
+/* Lists: Tactile zeroes ul/ol padding and its list-style shorthand resets
+   markers to outside, so bullets and numbers hang past the text edge. */
+#main_content ul,
+#main_content ol {
+  padding-left: 1.5em;
+  margin: 0 0 20px;
+}
+
+#main_content ul li,
+#main_content ol li {
+  list-style-position: outside;
+  padding-left: 0.25em;
+  margin: 0 0 4px;
+}
+
+#main_content ul li {
+  list-style-type: disc;
+}
+
+#main_content ol li {
+  list-style-type: decimal;
+}
+
+#main_content li > ul,
+#main_content li > ol {
+  margin: 4px 0 0;
+}
+
+/* Wider content column (pages with `wide: true`) */
+.inner.inner-wide {
+  width: min(1100px, 94%);
+}
+
+/* mako-sgp4 demo */
+.demo {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.demo-top {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 20px;
+}
+
+.demo-panel {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 14px;
+}
+
+.demo-panel-title {
+  font-weight: bold;
+  color: var(--text-secondary);
+  margin-bottom: 10px;
+}
+
+.demo-muted {
+  font-weight: normal;
+  font-size: 0.85em;
+  opacity: 0.7;
+  margin-left: 6px;
+}
+
+.demo-globe {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+}
+
+.demo-globe canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+  cursor: grab;
+}
+
+.demo-map {
+  width: 100%;
+  aspect-ratio: 2 / 1;
+  display: block;
+  border-radius: 6px;
+}
+
+.demo-input {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.demo-toggle {
+  display: flex;
+  gap: 6px;
+}
+
+.demo-toggle button,
+.demo-run {
+  padding: 6px 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  background: var(--bg-primary);
+  color: var(--text-secondary);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.demo-toggle button.active,
+.demo-run {
+  border-color: var(--link-color);
+  color: var(--link-color);
+}
+
+.demo-input textarea {
+  flex: 1;
+  min-height: 260px;
+  resize: vertical;
+  padding: 10px;
+  font-family: Menlo, Consolas, monospace;
+  font-size: 11.5px;
+  line-height: 1.5;
+  white-space: pre;
+  overflow: auto;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  background: var(--bg-primary);
+  color: var(--text-secondary);
+}
+
+.demo-input textarea::placeholder {
+  color: var(--text-primary);
+  opacity: 0.45;
+}
+
+.demo-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.demo-actions .demo-muted {
+  margin-left: 0;
+}
+
+.demo-message {
+  white-space: pre-line;
+  font-size: 0.9em;
+  color: var(--text-primary);
+}
+
+.demo-message.demo-error {
+  color: var(--link-color);
+}
+
+.demo-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9em;
+}
+
+.demo-table th,
+.demo-table td {
+  padding: 6px 8px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+  white-space: nowrap;
+}
+
+.demo-swatch {
+  display: inline-block;
+  width: 16px;
+  height: 14px;
+  vertical-align: middle;
+}
+
+.demo-globe {
+  position: relative;
+}
+
+/* Black space behind the globe, in both themes, framed like the other panels */
+.demo-space .demo-globe {
+  background: #000;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.demo-labels {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.demo-label {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font: 12px system-ui, -apple-system, "Segoe UI", sans-serif;
+  color: #e8e8e8;
+  text-shadow: 0 0 3px #0c121c, 0 0 3px #0c121c;
+  white-space: nowrap;
+}
+
+@media (max-width: 860px) {
+  .demo-top {
+    grid-template-columns: 1fr;
+  }
+
+  .demo-panel:has(.demo-table) {
+    overflow-x: auto;
+  }
+}
+
+.demo-link {
+  display: inline-block;
+  text-decoration: none;
+}
+
+/* Demo link on featured project cards */
+.project-demo {
+  margin: 0;
+}

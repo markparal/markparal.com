@@ -30,13 +30,13 @@
     </button>
 
     <div id="container">
-      <div class="inner">
+      <div class="inner{% if page.wide %} inner-wide{% endif %}">
         
         <!-- Navigation Header -->
         <header>
             <div class="brand-title">
-              <h1>{{ page.title | default: site.title }}</h1>
-              <p>{{ page.description | default: site.description }}</p>
+              <a href="{{ '/' | relative_url }}" class="brand-link"><h1>{{ site.title }}</h1></a>
+              <p>{{ site.description }}</p>
             </div>
           
             <nav class="navbar">
@@ -56,25 +56,14 @@
             <div class="mobile-overlay" id="mobile-overlay"></div>
         </header>
         
-        <!-- Optional Download Buttons -->
-        <section id="downloads" class="clearfix">
-          {% if site.show_downloads %}
-          <a href="{{ site.github.zip_url }}" id="download-zip" class="button"><span>Download .zip</span></a>
-          <a href="{{ site.github.tar_url }}" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
-          {% endif %}
-          {% if site.github.public %}
-            {% if site.github.is_project_page %}
-            <a href="{{ site.github.repository_url }}" id="view-on-github" class="button"><span>View on GitHub</span></a>
-            {% else %}
-            <a href="{{ site.github.owner_url }}" id="view-on-github" class="button"><span>View on GitHub</span></a>
-            {% endif %}
-          {% endif %}
-        </section>
-
-        <hr>
-
         <!-- Main Content Section -->
         <section id="main_content">
+          {% unless page.hide_title %}
+          <div class="page-heading">
+            <h1 class="page-title">{{ page.title }}</h1>
+            {% if page.description %}<p class="page-subtitle">{{ page.description }}</p>{% endif %}
+          </div>
+          {% endunless %}
           {{ content }}
         </section>
 

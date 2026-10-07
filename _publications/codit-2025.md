@@ -8,4 +8,5 @@ image: "/assets/images/codit2025/cover_image.png"
 type: "Academic Papers"
 link: "https://arxiv.org/abs/2509.02808"
 award: "CoDIT 2025 Best Paper"
+featured: 2
 --- 
