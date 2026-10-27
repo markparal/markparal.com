@@ -38,7 +38,7 @@ const MARKER_RING = '#0c121c';   // dark ring around fins, matching the Earth
 // Example elements
 // ----------------
 
-// ISS (ZARYA) from Vallado's test set, with the epoch moved to today at 00:00 UTC
+// ISS (ZARYA) elements from Vallado's test set, renamed MAKO-SAT, with the epoch moved to today at 00:00 UTC
 function todayUtc() {
   const now = new Date();
   return new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate()));
@@ -59,7 +59,7 @@ function exampleTle(epoch) {
   const epochField = String(year % 100).padStart(2, '0') + String(doy).padStart(3, '0') + '.00000000';
   const body = '1 25544U 98067A   ' + epochField + ' -.00002182 -00100-2 -11606-4 0  292';
   return [
-    'ISS (ZARYA)',
+    'MAKO-SAT',
     body + tleChecksum(body),
     '2 25544  51.6416 247.4627 0006703 130.5360 325.0288 15.72125391563537',
   ].join('\n');
@@ -71,7 +71,7 @@ function exampleOmm(epoch) {
 CREATION_DATE  =
 ORIGINATOR     =
 
-OBJECT_NAME    = ISS (ZARYA)
+OBJECT_NAME    = MAKO-SAT
 OBJECT_ID      = 1998-067A
 CENTER_NAME    = EARTH
 REF_FRAME      = TEME
